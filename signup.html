@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HepaVision AI – Request Access</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-login">
+  <div class="login-shell">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="logo-mark"></div>
+        <div class="logo-text">
+          <span class="logo-title">HepaVision AI</span>
+          <span class="logo-sub">Liver Cancer Detection</span>
+        </div>
+      </div>
+
+      <nav class="topbar-nav">
+        <a href="#" class="nav-link">Overview</a>
+        <a href="#" class="nav-link">Security</a>
+        <a href="#" class="nav-link">Support</a>
+      </nav>
+    </header>
+
+    <main class="login-main signup-layout">
+      <aside class="steps-card">
+        <h2 class="steps-title">Onboarding steps</h2>
+        <ol class="steps-list">
+          <li class="step active">
+            <span class="step-badge">1</span>
+            <div>
+              <p class="step-title">Submit credentials</p>
+              <p class="step-sub">Basic profile & role details</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-badge">2</span>
+            <div>
+              <p class="step-title">Hospital verification</p>
+              <p class="step-sub">Admin validates your request</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-badge">3</span>
+            <div>
+              <p class="step-title">Account activation</p>
+              <p class="step-sub">You receive secure access link</p>
+            </div>
+          </li>
+        </ol>
+      </aside>
+
+      <section class="auth-card hover-rise">
+        <div class="auth-header">
+          <h2 class="auth-title">Request clinical access</h2>
+          <p class="auth-sub">
+            Only verified clinicians and researchers will be approved.
+          </p>
+        </div>
+
+        <form class="auth-form" action="/signup" method="post">
+          <div class="field-grid">
+            <div class="field">
+              <label for="fullName" class="field-label">Full name</label>
+              <div class="field-wrap">
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  class="field-input"
+                  placeholder="Dr. Muhammad Azam"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email" class="field-label">Institutional email</label>
+              <div class="field-wrap">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  class="field-input"
+                  placeholder="name@hospital.org"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="role" class="field-label">Role</label>
+              <div class="field-wrap">
+                <select id="role" name="role" class="field-input" required>
+                  <option value="">Select role</option>
+                  <option value="hepatologist">Hepatologist</option>
+                  <option value="radiologist">Radiologist</option>
+                  <option value="surgeon">Liver surgeon</option>
+                  <option value="researcher">Researcher</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="dept" class="field-label">Department</label>
+              <div class="field-wrap">
+                <input
+                  id="dept"
+                  name="dept"
+                  type="text"
+                  class="field-input"
+                  placeholder="Hepatology / Radiology"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="hospital" class="field-label">Hospital / Institute</label>
+            <div class="field-wrap">
+              <input
+                id="hospital"
+                name="hospital"
+                type="text"
+                class="field-input"
+                placeholder="e.g. Liver Care Hospital, Karachi"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="password" class="field-label">Password</label>
+              <div class="field-wrap">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  class="field-input"
+                  placeholder="At least 8 characters"
+                  minlength="8"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="confirmPassword" class="field-label">Confirm password</label>
+              <div class="field-wrap">
+                <input
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  class="field-input"
+                  placeholder="Repeat password"
+                  minlength="8"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <label class="check-wrap terms">
+            <input type="checkbox" required />
+            <span>
+              I confirm that I am an authorized healthcare professional and agree to
+              the data protection and audit policies.
+            </span>
+          </label>
+
+          <button type="submit" class="btn-primary full-width">
+            Submit for verification
+          </button>
+
+          <p class="auth-footer-text">
+            Already approved? <a href="index.html" class="text-link-underline">Back to login</a>
+          </p>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

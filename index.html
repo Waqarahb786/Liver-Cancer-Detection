@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HepaVision AI – Liver Cancer Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-login">
+  <div class="login-shell">
+    <!-- Top nav -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="logo-mark"></div>
+        <div class="logo-text">
+          <span class="logo-title">HepaVision AI</span>
+          <span class="logo-sub">Liver Cancer Detection</span>
+        </div>
+      </div>
+
+      <nav class="topbar-nav">
+        <a href="#" class="nav-link">Overview</a>
+        <a href="#" class="nav-link">Model</a>
+        <a href="#" class="nav-link">Docs</a>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="login-main">
+      <section class="info-card hover-tilt">
+        <h1 class="info-title">
+          Precision support for
+          <span class="info-gradient">hepatic oncology teams.</span>
+        </h1>
+        <p class="info-text">
+          HepaVision AI analyzes liver CT / MRI scans and highlights suspicious regions,
+          staging hints and risk scores – while keeping clinicians fully in control.
+        </p>
+
+        <div class="pill-row">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            <span>Multi-modal liver imaging support</span>
+          </div>
+          <div class="pill">
+            <span class="pill-dot pill-dot-warn"></span>
+            <span>Real-time case triage & alerts</span>
+          </div>
+        </div>
+
+        <div class="mini-stats">
+          <div class="mini-stat">
+            <span class="mini-label">Hospitals onboarded</span>
+            <span class="mini-value">18</span>
+          </div>
+          <div class="mini-stat">
+            <span class="mini-label">Avg. triage gain</span>
+            <span class="mini-value">+27%</span>
+          </div>
+          <div class="mini-stat">
+            <span class="mini-label">Data encrypted</span>
+            <span class="mini-value">AES‑256</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="auth-card hover-rise">
+        <div class="auth-header">
+          <h2 class="auth-title">Sign in</h2>
+          <p class="auth-sub">
+            Use your hospital email to access liver cancer dashboards.
+          </p>
+        </div>
+
+        <form class="auth-form" action="/login" method="post">
+          <div class="field">
+            <label for="email" class="field-label">Work email</label>
+            <div class="field-wrap">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="field-input"
+                placeholder="consultant@hospital.org"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="password" class="field-label">Password</label>
+            <div class="field-wrap">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                class="field-input"
+                placeholder="••••••••"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="auth-row">
+            <label class="check-wrap">
+              <input type="checkbox" />
+              <span>Keep me signed in</span>
+            </label>
+            <a href="#" class="text-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn-primary full-width">
+            Continue to console
+          </button>
+
+          <p class="auth-footer-text">
+            New to HepaVision? <a href="signup.html" class="text-link-underline">Request access</a>
+          </p>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

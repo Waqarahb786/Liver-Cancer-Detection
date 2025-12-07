@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HepaVision AI – Liver Admin Console</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-admin">
+  <div class="admin-shell">
+    <!-- Top navigation bar (different from sidebar layout) -->
+    <header class="admin-topbar">
+      <div class="admin-brand">
+        <div class="logo-mark"></div>
+        <div class="logo-text">
+          <span class="logo-title">HepaVision Admin</span>
+          <span class="logo-sub">Liver Oncology Console</span>
+        </div>
+      </div>
+
+      <nav class="admin-menu">
+        <button class="menu-item active" data-section="overview">Overview</button>
+        <button class="menu-item" data-section="worklist">Worklist</button>
+        <button class="menu-item" data-section="clinicians">Clinicians</button>
+        <button class="menu-item" data-section="settings">Settings</button>
+      </nav>
+
+      <div class="admin-user">
+        <span class="admin-user-name">Admin · Azam</span>
+        <a href="index.html" class="text-link-underline small">Logout</a>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="admin-main">
+      <!-- OVERVIEW -->
+      <section id="section-overview" class="admin-section">
+        <div class="kpi-row">
+          <article class="kpi-card">
+            <p class="kpi-label">Liver scans today</p>
+            <p class="kpi-value">42</p>
+            <p class="kpi-sub">+13 vs yesterday</p>
+          </article>
+          <article class="kpi-card">
+            <p class="kpi-label">High-risk cases</p>
+            <p class="kpi-value kpi-warn">9</p>
+            <p class="kpi-sub">Flagged for urgent review</p>
+          </article>
+          <article class="kpi-card">
+            <p class="kpi-label">Median AI confidence</p>
+            <p class="kpi-value">91%</p>
+            <p class="kpi-sub">On latest liver model</p>
+          </article>
+          <article class="kpi-card">
+            <p class="kpi-label">Active clinicians</p>
+            <p class="kpi-value">27</p>
+            <p class="kpi-sub">Across 4 departments</p>
+          </article>
+        </div>
+
+        <div class="grid-two">
+          <section class="panel">
+            <header class="panel-header">
+              <h3 class="panel-title">Live triage queue</h3>
+              <span class="panel-tag">Realtime</span>
+            </header>
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Patient</th>
+                    <th>Scan ID</th>
+                    <th>AI finding</th>
+                    <th>Confidence</th>
+                    <th>Priority</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>LV-2021 · M · 61</td>
+                    <td>LIV‑CT‑3009</td>
+                    <td>Suspicious segment VIII lesion</td>
+                    <td>94%</td>
+                    <td><span class="badge badge-high">High</span></td>
+                  </tr>
+                  <tr>
+                    <td>LV-2043 · F · 49</td>
+                    <td>LIV‑MRI‑3013</td>
+                    <td>Possible early HCC</td>
+                    <td>89%</td>
+                    <td><span class="badge badge-med">Medium</span></td>
+                  </tr>
+                  <tr>
+                    <td>LV-2050 · M · 55</td>
+                    <td>LIV‑CT‑3016</td>
+                    <td>No focal lesion</td>
+                    <td>96%</td>
+                    <td><span class="badge badge-low">Low</span></td>
+                  </tr>
+                  <tr>
+                    <td>LV-2062 · F · 38</td>
+                    <td>LIV‑MRI‑3021</td>
+                    <td>Multiple benign cysts</td>
+                    <td>87%</td>
+                    <td><span class="badge badge-low">Low</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="panel">
+            <header class="panel-header">
+              <h3 class="panel-title">Model status</h3>
+            </header>
+            <ul class="model-list">
+              <li class="model-item">
+                <div>
+                  <p class="model-name">Liver‑HCC‑v2.4</p>
+                  <p class="model-sub">Primary detection model in production</p>
+                </div>
+                <span class="chip chip-live">Live</span>
+              </li>
+              <li class="model-item">
+                <div>
+                  <p class="model-name">Liver‑Seg‑v1.9</p>
+                  <p class="model-sub">Segmentation for volumetric analysis</p>
+                </div>
+                <span class="chip">Shadow</span>
+              </li>
+              <li class="model-item">
+                <div>
+                  <p class="model-name">Liver‑Research‑beta</p>
+                  <p class="model-sub">Experimental trial model</p>
+                </div>
+                <span class="chip chip-disabled">Disabled</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <!-- WORKLIST -->
+      <section id="section-worklist" class="admin-section hidden">
+        <section class="panel">
+          <header class="panel-header">
+            <h3 class="panel-title">Worklist (demo UI)</h3>
+            <span class="panel-subtitle">Filter by priority and clinician</span>
+          </header>
+          <p class="panel-placeholder">
+            Here you can build a table with filters for date, hospital, clinician,
+            and priority. This is only static frontend for now.
+          </p>
+        </section>
+      </section>
+
+      <!-- CLINICIANS -->
+      <section id="section-clinicians" class="admin-section hidden">
+        <section class="panel">
+          <header class="panel-header">
+            <h3 class="panel-title">Clinicians</h3>
+          </header>
+          <p class="panel-placeholder">
+            This section would show all registered hepatologists, radiologists and
+            surgeons with their status and access level.
+          </p>
+        </section>
+      </section>
+
+      <!-- SETTINGS -->
+      <section id="section-settings" class="admin-section hidden">
+        <section class="panel">
+          <header class="panel-header">
+            <h3 class="panel-title">System settings</h3>
+          </header>
+          <p class="panel-placeholder">
+            Configure PACS integration, retention periods, and notification channels
+            here in a future backend-connected version.
+          </p>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Simple tab switcher
+    const menuItems = document.querySelectorAll(".menu-item");
+    const sections = {
+      overview: document.getElementById("section-overview"),
+      worklist: document.getElementById("section-worklist"),
+      clinicians: document.getElementById("section-clinicians"),
+      settings: document.getElementById("section-settings"),
+    };
+
+    menuItems.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-section");
+        menuItems.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        Object.keys(sections).forEach((key) => {
+          sections[key].classList.toggle("hidden", key !== target);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
