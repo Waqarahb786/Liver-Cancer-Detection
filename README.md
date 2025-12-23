@@ -1,4 +1,4 @@
-# MedAssist-Liver: an AI-powered Liver Tumor Segmentation Tool
+an AI-powered Liver Tumor Segmentation Tool
 
 Liver cancer is a significant global health concern. Automated liver tumor segmentation remains to be a challenging tasks that demands more research. Read more about the background [here](documentation/research.md). 
 
